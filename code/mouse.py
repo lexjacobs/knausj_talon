@@ -272,7 +272,6 @@ def show_cursor_helper(show):
     else:
         ctrl.cursor_visible(show)
 
-
 def on_pop(active):
     if setting_mouse_enable_pop_stops_scroll.get() >= 1 and (gaze_job or scroll_job):
             stop_scroll()
