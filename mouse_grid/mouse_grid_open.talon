@@ -5,6 +5,9 @@ tag: user.mouse_grid_showing
 grid off:
     user.grid_close()
 
+grid (close | quit):
+    user.grid_close()
+
 grid reset:
     user.grid_reset()
 

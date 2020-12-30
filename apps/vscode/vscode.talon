@@ -26,11 +26,11 @@ action(edit.indent_less): user.vscode("editor.action.outdentLines")
 action(edit.save_all): user.vscode("workbench.action.files.saveAll")
 
 # splits.py support begin
-action(user.split_clear_all): user.vscode("workbench.action.editorLayoutSingle")
-action(user.split_clear): user.vscode("workbench.action.joinTwoGroups")
-action(user.split_flip): user.vscode("workbench.action.toggleEditorGroupLayout") 
-action(user.split_last): user.vscode("workbench.action.focusLeftGroup")
-action(user.split_next): user.vscode_and_wait("workbench.action.focusRightGroup")
+action(user.split_clear_all): user.vscode("View: Single Column Editor Layout")
+action(user.split_clear): user.vscode("View: Join Editor Group with Next Group")
+action(user.split_flip): user.vscode("View: Toggle Vertical/Horizontal Editor Layout")
+action(user.split_last): user.vscode("View: Focus Previous Editor Group")
+action(user.split_next):  user.vscode("View: Focus Next Editor Group")
 action(user.split_window_down): user.vscode("workbench.action.moveEditorToBelowGroup")
 action(user.split_window_horizontally): user.vscode("workbench.action.splitEditorOrthogonal")
 action(user.split_window_left): user.vscode("workbench.action.moveEditorToLeftGroup")
@@ -52,8 +52,8 @@ action(user.multi_cursor_select_fewer_occurrences): user.vscode("cursorUndo")
 action(user.multi_cursor_select_more_occurrences): user.vscode("editor.action.addSelectionToNextFindMatch")
 #multiple_cursor.py support end
 
-please [<user.text>]: 
-  user.vscode("workbench.action.showCommands")
+please [<user.text>]:
+  user.vscode("Show All Commands")
   insert(user.text or "")
 
 # Sidebar
@@ -91,22 +91,20 @@ wrap switch: user.vscode("editor.action.toggleWordWrap")
 zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
-file hunt [<user.text>]: 
-  user.vscode("workbench.action.quickOpen")
+file hunt [<user.text>]:
+  user.vscode("Go to File")
   sleep(50ms)
   insert(text or "")
-file copy path: user.vscode("copyFilePath") 
-file create sibling: user.vscode_and_wait("explorer.newFile")
-file create: user.vscode("workbench.action.files.newUntitledFile")
-file rename:
-	user.vscode("fileutils.renameFile")
-	sleep(150ms)
-file move:
-	user.vscode("fileutils.moveFile")
-	sleep(150ms)
-file open folder: user.vscode("revealFileInOS")
-file reveal: user.vscode("workbench.files.action.showActiveFileInExplorer") 
-save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
+file copy path: user.vscode_ignore_clipboard("File: Copy Path of Active File")
+file create sibling: user.vscode("File: New File")
+file create: user.vscode("File: New Untitled File")
+file open folder: user.vscode("File: Reveal in File Explorer")
+#todo: rename isn't working.
+#file rename active:
+#  user.vscode("File: Reveal Active File In Side Bar")
+#  user.vscode("renameFile")
+#file rename: user.vscode("renameFile")
+file reveal: user.vscode("File: Reveal Active File In Side Bar")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")
@@ -130,13 +128,14 @@ refactor rename: user.vscode("editor.action.rename")
 refactor this: user.vscode("editor.action.refactor")
 
 #code navigation
-(go declaration | follow): user.vscode("editor.action.revealDefinition")
-go back: user.vscode("workbench.action.navigateBack") 
-go forward:  user.vscode("workbench.action.navigateForward")  
-go implementation: user.vscode("editor.action.goToImplementation")
+(go declaration | follow): user.vscode("Go to Declaration")
+go back: user.vscode("workbench.action.navigateBack")
+go forward:  user.vscode("workbench.action.navigateForward")
+go implementation: user.vscode("Go to Implementation")
+go recent: user.vscode("File: Open Recent")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
-go recent [<user.text>]: 
+go recent [<user.text>]:
   user.vscode("workbench.action.openRecent")
   sleep(50ms)
   insert(text or "")
@@ -160,7 +159,7 @@ fold comments: user.vscode("editor.foldAllBlockComments")
 # Git / Github (not using verb-noun-adjective pattern, mirroring terminal commands.)
 git branch: user.vscode("git.branchFrom")
 git branch this: user.vscode("git.branch")
-git checkout [<user.text>]: 
+git checkout [<user.text>]:
   user.vscode("git.checkout")
   sleep(50ms)
   insert(text or "")
@@ -250,3 +249,5 @@ cell run above: user.vscode("jupyter.runallcellsabove.palette")
 cell run: user.vscode("jupyter.runcurrentcell")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
+# vim mode
+toggle them: user.vscode("vim: toggle vim mode")
