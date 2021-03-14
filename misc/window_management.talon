@@ -4,6 +4,7 @@ window last: app.window_previous()
 window close: app.window_close()
 focus <user.running_applications>: user.switcher_focus(running_applications)
 running list: user.switcher_toggle_running()
+application show: user.switcher_toggle_running()
 launch <user.launch_applications>: user.switcher_launch(launch_applications)
 
 snap <user.window_snap_position>: user.snap_window(window_snap_position)

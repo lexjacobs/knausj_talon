@@ -152,6 +152,8 @@ punctuation_words = {
     "at sign": "@",
     "and sign": "&",
     "ampersand": "&",
+    "semi": ";",
+    "sinker": ";",
     "tanker": "`",
 }
 symbol_key_words = {

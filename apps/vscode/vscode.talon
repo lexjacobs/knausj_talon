@@ -251,3 +251,13 @@ cell run: user.vscode("jupyter.runcurrentcell")
 install local: user.vscode("workbench.extensions.action.installVSIX")
 # vim mode
 toggle them: user.vscode("vim: toggle vim mode")
+
+# tab actions
+tab close others:
+  key("alt-cmd-t")
+
+tab close all:
+  key("cmd-k w")
+
+tab close saved:
+  key("cmd-k u")

@@ -1,3 +1,8 @@
+call: "()"
+arrow fat: "=>"
+coal gap: ": "
+assign: " = "
+teapot: "this."
 question [mark]: "?"
 (downscore | underscore): "_"
 double dash: "--"
