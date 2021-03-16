@@ -1,7 +1,7 @@
 #provide both anchored and unachored commands via 'over'
 phrase <user.text>$: user.insert_formatted(text, "NOOP")
 phrase <user.text> over: user.insert_formatted(text, "NOOP")
-oh <user.text>$: user.insert_formatted(text, "NOOP")
+oh <user.text>: user.insert_formatted(text, "NOOP")
 oh <user.text> over: user.insert_formatted(text, "NOOP")
 {user.prose_formatter} <user.prose>$: user.insert_formatted(prose, prose_formatter)
 {user.prose_formatter} <user.prose> over: user.insert_formatted(prose, prose_formatter)

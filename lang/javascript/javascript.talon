@@ -34,10 +34,10 @@ action(user.code_state_else):
   insert(" else {}")
   key(left enter)
 
-action(user.code_block): 
-  insert("{}") 
+action(user.code_block):
+  insert("{}")
   key(left enter)
-  
+
 action(user.code_self): "this"
 
 action(user.code_state_while):
@@ -133,8 +133,10 @@ state const: "const "
 state let: "let "
 
 state var: "var "
+state variable: "var "
 
 state async: "async "
+state a sink: "async "
 
 state await: "await "
 
