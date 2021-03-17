@@ -128,12 +128,20 @@ action(user.code_operator_bitwise_left_shift_assignment): " <<= "
 action(user.code_operator_bitwise_right_shift): " >> "
 action(user.code_operator_bitwise_right_shift_assignment): " >>= "
 
-state const: "const "
+state const : "const "
+^state const <user.text>$:
+  insert("const ")
+  insert(user.text)
 
 state let: "let "
+^state let <user.text>$:
+  insert("let ")
+  insert(user.text)
 
-state var: "var "
-state variable: "var "
+state (var | variable): "var "
+^state variable <user.text>$:
+  insert("var ")
+  insert(user.text)
 
 state async: "async "
 state a sink: "async "
