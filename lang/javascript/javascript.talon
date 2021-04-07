@@ -1,6 +1,6 @@
 mode: user.javascript
 mode: command
-and code.language: javascript
+# and code.language: javascript
 -
 tag(): user.code_operators
 tag(): user.code_comment
@@ -136,6 +136,10 @@ state const : "const "
 state let: "let "
 ^state let <user.text>$:
   insert("let ")
+  insert(user.text)
+
+^state return <user.text>$:
+  insert("return ")
   insert(user.text)
 
 state (var | variable): "var "
