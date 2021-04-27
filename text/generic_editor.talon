@@ -123,6 +123,11 @@ clear word right | kite:
     edit.extend_word_right()
     edit.delete()
 
+# mispronunciation
+kit:
+    edit.extend_word_right()
+    edit.delete()
+
 clear way left:
     edit.extend_line_start()
     edit.delete()

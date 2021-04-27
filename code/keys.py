@@ -118,7 +118,7 @@ modifier_keys = {
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
 }
-if app.platform  == "mac":
+if app.platform == "mac":
     modifier_keys["command"] = "cmd"
     modifier_keys["option"] = "alt"
 ctx.lists["self.modifier_key"] = modifier_keys
@@ -228,6 +228,12 @@ simple_keys = [
 
 alternate_keys = {
     "delete": "backspace",
+    # mispronunciation
+    "delite": "backspace",
+    "delate": "backspace",
+    "deleat": "backspace",
+    "tolete": "backspace",
+    "polete": "backspace",
     "forward delete": "delete",
     "junk": "backspace",
     "page up": "pageup",
