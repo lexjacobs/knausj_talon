@@ -5,4 +5,12 @@ shock: key(cmd-shift-enter)
   mouse_click()
 	mouse_click()
   insert(user.text)
+^click double copy$:
+  mouse_click()
+	mouse_click()
+  key(cmd-c)
+^click double paste$:
+  mouse_click()
+	mouse_click()
+  key(cmd-v)
 dot company: insert('.com')
