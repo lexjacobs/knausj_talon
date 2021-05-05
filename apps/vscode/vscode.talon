@@ -105,6 +105,7 @@ file open folder: user.vscode("File: Reveal in File Explorer")
 #  user.vscode("renameFile")
 #file rename: user.vscode("renameFile")
 file reveal: user.vscode("File: Reveal Active File In Side Bar")
+save ugly: user.vscode("workbench.action.files.saveWithoutFormatting")
 
 # Language Features
 suggest show: user.vscode("editor.action.triggerSuggest")

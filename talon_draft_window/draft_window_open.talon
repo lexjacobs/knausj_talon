@@ -3,7 +3,7 @@ tag: user.draft_window_showing
 -
 draft hide: user.draft_hide()
 
-draft submit:
+draft submit|insert:
   content = user.draft_get_text()
   user.draft_hide()
   insert(content)
