@@ -27,12 +27,18 @@ camera calibrate: user.mouse_calibrate()
 #option = alt
 #shift
 #super = windows key
-<user.modifiers> (touch | click left):
+click <user.modifiers>:
 	key("{modifiers}:down")
 	mouse_click(0)
 	key("{modifiers}:up")
 	# close the mouse grid
 	user.grid_close()
+# <user.modifiers> (touch | click left):
+# 	key("{modifiers}:down")
+# 	mouse_click(0)
+# 	key("{modifiers}:up")
+# 	# close the mouse grid
+# 	user.grid_close()
 <user.modifiers> (righty | click right):
 	key("{modifiers}:down")
 	mouse_click(1)
