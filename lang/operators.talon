@@ -1,54 +1,54 @@
 tag: user.code_operators
 -
 #pointer operators
-op dereference: user.code_operator_indirection()
-op address of: user.code_operator_address_of()
-op arrow: user.code_operator_structure_dereference()
+do dereference: user.code_operator_indirection()
+do address of: user.code_operator_address_of()
+do arrow: user.code_operator_structure_dereference()
 
 #lambda
-op lambda: user.code_operator_lambda()
+do lambda: user.code_operator_lambda()
 
 #subscript
-op subscript: user.code_operator_subscript()
+do subscript: user.code_operator_subscript()
 
 #assignment
-op (equals | assign): user.code_operator_assignment()
+do (equals | assign): user.code_operator_assignment()
 
 #math operators
-op (minus | subtract): user.code_operator_subtraction()
-op (minus | subtract) equals: user.code_operator_subtraction_assignment()
-op (plus | add): user.code_operator_addition()
-op (plus | add) equals: user.code_operator_addition_assignment()
-op (times | multiply): user.code_operator_multiplication()
-op (times | multiply) equals: user.code_operator_multiplication_assignment()
-op divide: user.code_operator_division()
-op divide equals: user.code_operator_division_assignment()
-op mod: user.code_operator_modulo()
-op mod equals: user.code_operator_modulo_assignment()
-(op (power | exponent) | to the power [of]): user.code_operator_exponent()
+do (minus | subtract): user.code_operator_subtraction()
+do (minus | subtract) equals: user.code_operator_subtraction_assignment()
+do (plus | add): user.code_operator_addition()
+do (plus | add) equals: user.code_operator_addition_assignment()
+do (times | multiply): user.code_operator_multiplication()
+do (times | multiply) equals: user.code_operator_multiplication_assignment()
+do divide: user.code_operator_division()
+do divide equals: user.code_operator_division_assignment()
+do mod: user.code_operator_modulo()
+do mod equals: user.code_operator_modulo_assignment()
+(do (power | exponent) | to the power [of]): user.code_operator_exponent()
 
 #comparison operators
-(op | is) equal: user.code_operator_equal()
-(op | is) not equal: user.code_operator_not_equal()
-(op | is) (greater | more): user.code_operator_greater_than()
-(op | is) (less | below) [than]: user.code_operator_less_than()
-(op | is) greater [than] or equal: user.code_operator_greater_than_or_equal_to()
-(op | is) less [than] or equal: user.code_operator_less_than_or_equal_to()
-(op | is) in: user.code_operator_in()
+(do | is) equal: user.code_operator_equal()
+(do | is) not equal: user.code_operator_not_equal()
+(do | is) (greater | more): user.code_operator_greater_than()
+(do | is) (less | below) [than]: user.code_operator_less_than()
+(do | is) greater [than] or equal: user.code_operator_greater_than_or_equal_to()
+(do | is) less [than] or equal: user.code_operator_less_than_or_equal_to()
+(do | is) in: user.code_operator_in()
 
 #logical operators
-(op | logical) and: user.code_operator_and()
-(op | logical) or: user.code_operator_or()
+(do | logical) and: user.code_operator_and()
+(do | logical) or: user.code_operator_or()
 
 #bitwise operators
-[op] bitwise and: user.code_operator_bitwise_and()
-[op] bitwise or: user.code_operator_bitwise_or()
-(op | logical | bitwise) (ex | exclusive) or: user.code_operator_bitwise_exclusive_or()
-(op | logical | bitwise) (left shift | shift left): user.code_operator_bitwise_left_shift()
-(op | logical | bitwise) (right shift | shift right): user.code_operator_bitwise_right_shift()
-(op | logical | bitwise) (ex | exclusive) or equals: user.code_operator_bitwise_exclusive_or_equals()
-[(op | logical | bitwise)] (left shift | shift left) equals: user.code_operator_bitwise_left_shift_equals()
-[(op | logical | bitwise)] (left right | shift right) equals: user.code_operator_bitwise_right_shift_equals()
+[do] bitwise and: user.code_operator_bitwise_and()
+[do] bitwise or: user.code_operator_bitwise_or()
+(do | logical | bitwise) (ex | exclusive) or: user.code_operator_bitwise_exclusive_or()
+(do | logical | bitwise) (left shift | shift left): user.code_operator_bitwise_left_shift()
+(do | logical | bitwise) (right shift | shift right): user.code_operator_bitwise_right_shift()
+(do | logical | bitwise) (ex | exclusive) or equals: user.code_operator_bitwise_exclusive_or_equals()
+[(do | logical | bitwise)] (left shift | shift left) equals: user.code_operator_bitwise_left_shift_equals()
+[(do | logical | bitwise)] (left right | shift right) equals: user.code_operator_bitwise_right_shift_equals()
 
 #tbd
-(op | pad) colon: " : "
+(do | pad) colon: " : "
