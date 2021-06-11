@@ -141,6 +141,9 @@ formatters_dict = {
     "FIRST_THREE": (NOSEP, lambda i, word, _: word[0:3]),
     "FIRST_FOUR": (NOSEP, lambda i, word, _: word[0:4]),
     "FIRST_FIVE": (NOSEP, lambda i, word, _: word[0:5]),
+    "DOT_SPACE_PRECEDED_CAP_FIRST_WORD": (SEP, first_vs_rest(lambda w: '. ' + w.capitalize())),
+    "SPACE_PRECEDED_CAP_FIRST_WORD": (SEP, first_vs_rest(lambda w: ' ' + w.capitalize())),
+    "SPACE_PRECEDED_FIRST_WORD": (SEP, first_vs_rest(lambda w: ' ' + w)),
 }
 
 # This is the mapping from spoken phrases to formatters
@@ -156,6 +159,7 @@ formatters_words = {
     "packed": formatters_dict["DOUBLE_COLON_SEPARATED"],
     "padded": formatters_dict["SPACE_SURROUNDED_STRING"],
     # "say": formatters_dict["NOOP"],
+    # commenting due to replacement below
     # "sentence": formatters_dict["CAPITALIZE_FIRST_WORD"],
     "slasher": formatters_dict["SLASH_SEPARATED"],
     "smash": formatters_dict["NO_SPACES"],
@@ -167,6 +171,16 @@ formatters_words = {
     # "tree": formatters_dict["FIRST_THREE"],
     # "quad": formatters_dict["FIRST_FOUR"],
     # "fiver": formatters_dict["FIRST_FIVE"],
+    # USER ADDED FORMATTERS
+    "champ": formatters_dict["CAPITALIZE_FIRST_WORD"],
+    "champion": formatters_dict["CAPITALIZE_FIRST_WORD"],
+    "dot way": formatters_dict["DOT_SEPARATED"],
+    "dub string": formatters_dict["DOUBLE_QUOTED_STRING"],
+    "more": formatters_dict["SPACE_PRECEDED_FIRST_WORD"],
+    "pathway": formatters_dict["SLASH_SEPARATED"],
+    "period": formatters_dict["DOT_SPACE_PRECEDED_CAP_FIRST_WORD"],
+    "spine": formatters_dict["DASH_SEPARATED"],
+    "squash": formatters_dict["ALL_LOWERCASE"],
 }
 
 all_formatters = {}
@@ -284,9 +298,8 @@ class Actions:
 
 ctx.lists["self.formatters"] = formatters_words.keys()
 ctx.lists["self.prose_formatter"] = {
-    "say": "NOOP",
-    "speak": "NOOP",
-    "sentence": "CAPITALIZE_FIRST_WORD",
+    "say": "NOOP", "speak": "NOOP",
+    "sentence": "SPACE_PRECEDED_CAP_FIRST_WORD",
 }
 
 

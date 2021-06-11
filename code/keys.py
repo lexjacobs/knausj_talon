@@ -137,6 +137,7 @@ punctuation_words = {
     "grave": "`",
     "comma": ",",
     "period": ".",
+    "full stop": ".",
     "semicolon": ";",
     "colon": ":",
     "forward slash": "/",
@@ -151,6 +152,7 @@ punctuation_words = {
     "at sign": "@",
     "and sign": "&",
     "ampersand": "&",
+    "tanker": "`",
 }
 symbol_key_words = {
     "dot": ".",
