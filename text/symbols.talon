@@ -7,13 +7,13 @@ question [mark]: "?"
 (downscore | underscore): "_"
 double dash: "--"
 minus twice: "--"
-(bracket | brack | left bracket): "{"
-(rbrack | are bracket | right bracket): "}"
+block left: "{"
+block right: "}"
 triple quote: "'''"
 (triple grave | triple back tick | gravy):
     insert("```")
 (dot dot | dotdot): ".."
-ellipses: "..."
+ellipsis: "..."
 (comma and | spamma): ", "
 pebble: ", "
 plus: "+"
@@ -37,13 +37,15 @@ empty escaped string:
     "\\'\\'"
     key(left)
     key(left)
-(inside parens | args):
+arcs:
 	insert("()")
 	key(left)
-inside (squares | list):
-	insert("[]")
-	key(left)
-inside (bracket | braces):
+index:
+    insert("[]")
+    key(left)
+square:
+    insert("[]")
+inside block:
 	insert("{}")
 	key(left)
 inside percent:
@@ -61,7 +63,7 @@ angle that:
 (bracket | brace) that:
     text = edit.selected_text()
     user.paste("{{{text}}}")
-(parens | args) that:
+(parens | arcs) that:
     text = edit.selected_text()
     user.paste("({text})")
 percent that:

@@ -13,4 +13,13 @@ shock: key(cmd-shift-enter)
   mouse_click()
 	mouse_click()
   key(cmd-v)
+^swipe <user.text>$:
+  insert(', ' + user.text)
+^point <user.text>$:
+  insert('.' + user.text)
+^teapot <user.text>$:
+  insert('this.' + user.text)
 trestle: key(cmd-/)
+^slurp$:
+  key(delete)
+  key(backspace)

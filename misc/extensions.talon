@@ -11,7 +11,7 @@ dot net: ".net"
 dot organize: ".org"
 dot ex: ".exe"
 dot (bin | bend): ".bin"
-dot (jason | jay son): ".json".vim
+dot (jason | jay son): ".json"
 dot text: ".txt"
 dot MP3: ".mp3"
 dot flac: ".flac"
