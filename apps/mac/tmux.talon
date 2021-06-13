@@ -1,7 +1,8 @@
 os: mac
 app: iterm2
 -
-mux: "tmux "
+mux: key(ctrl-a)
+mux attach: "tmux attach -t "
 
 #session management
 mux new session:
