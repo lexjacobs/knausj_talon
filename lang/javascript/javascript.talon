@@ -128,6 +128,10 @@ action(user.code_operator_bitwise_left_shift_assignment): " <<= "
 action(user.code_operator_bitwise_right_shift): " >> "
 action(user.code_operator_bitwise_right_shift_assignment): " >>= "
 
+lambda: user.code_operator_lambda()
+
+trickle: " === "
+
 state const : "const "
 ^state const <user.text>$:
   insert("const ")

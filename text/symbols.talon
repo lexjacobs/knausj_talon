@@ -1,20 +1,19 @@
 call: "()"
 arrow fat: "=>"
 coal gap: ": "
+coal shock: ":\n"
 assign: " = "
 teapot: "this."
 question [mark]: "?"
 (downscore | underscore): "_"
-double dash: "--"
 minus twice: "--"
 block left: "{"
 block right: "}"
 triple quote: "'''"
-(triple grave | triple back tick | gravy):
+triple tanker:
     insert("```")
 (dot dot | dotdot): ".."
 ellipsis: "..."
-(comma and | spamma): ", "
 pebble: ", "
 plus: "+"
 arrow: "->"
@@ -48,22 +47,25 @@ square:
 inside block:
 	insert("{}")
 	key(left)
+inside angle:
+	insert("<>")
+	key(left)
 inside percent:
 	insert("%%")
 	key(left)
 inside quotes:
 	insert('""')
 	key(left)
-inside (graves | back ticks):
+inside tanker:
 	insert("``")
 	key(left)
 angle that:
     text = edit.selected_text()
     user.paste("<{text}>")
-(bracket | brace) that:
+block that:
     text = edit.selected_text()
     user.paste("{{{text}}}")
-(parens | arcs) that:
+(parents | arcs) that:
     text = edit.selected_text()
     user.paste("({text})")
 percent that:
@@ -72,6 +74,6 @@ percent that:
 quote that:
     text = edit.selected_text()
     user.paste('"{text}"')
-(grave | back tick) that:
+tanker that:
     text = edit.selected_text()
     user.paste('`{text}`')

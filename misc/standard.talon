@@ -22,9 +22,15 @@ redo: edit.redo()
 paste match: edit.paste_match_style()
 file save: edit.save()
 wipe: key(backspace)
-(pad | padding):
+pad right:
+	insert(" ")
+	key(left)
+padding:
 	insert("  ")
 	key(left)
+^slurp$:
+  key(delete)
+  key(backspace)
 slap:
 	edit.line_end()
 	key(enter)

@@ -19,7 +19,6 @@ shock: key(cmd-shift-enter)
   insert('.' + user.text)
 ^teapot <user.text>$:
   insert('this.' + user.text)
+^pad right <user.text>$:
+  insert(user.text + ' ')
 trestle: key(cmd-/)
-^slurp$:
-  key(delete)
-  key(backspace)
