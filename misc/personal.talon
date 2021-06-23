@@ -13,6 +13,8 @@ shock: key(cmd-shift-enter)
   mouse_click()
 	mouse_click()
   key(cmd-v)
+^more <user.text>:
+  insert(' ' + user.text)
 ^swipe <user.text>$:
   insert(', ' + user.text)
 ^point <user.text>$:

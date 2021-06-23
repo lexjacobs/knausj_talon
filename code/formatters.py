@@ -180,7 +180,7 @@ formatters_words = {
     "champion": formatters_dict["CAPITALIZE_FIRST_WORD"],
     "dot way": formatters_dict["DOT_SEPARATED"],
     "dub string": formatters_dict["DOUBLE_QUOTED_STRING"],
-    "more": formatters_dict["SPACE_PRECEDED_FIRST_WORD"],
+    # "more": formatters_dict["SPACE_PRECEDED_FIRST_WORD"],
     "pad right": formatters_dict["SPACE_FOLLOWING_FIRST_WORD"],
     "pathway": formatters_dict["SLASH_SEPARATED"],
     "period": formatters_dict["DOT_SPACE_PRECEDED_CAP_FIRST_WORD"],
