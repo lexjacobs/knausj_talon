@@ -23,4 +23,9 @@ shock: key(cmd-shift-enter)
   insert('this.' + user.text)
 ^pad right <user.text>$:
   insert(user.text + ' ')
-trestle: key(cmd-/)
+trestle:
+  key(cmd-/)
+^word get hub:
+  insert('github')
+^snippet thanks:
+  insert('Thanks,\nAlex')

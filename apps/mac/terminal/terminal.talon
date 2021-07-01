@@ -1,4 +1,4 @@
-app: apple_terminal
+app: iterm2
 -
 #comment or remove tags for command sets you don't want
 tag(): user.file_manager
@@ -32,4 +32,14 @@ suspend:
 resume:
   insert("fg")
   key(enter)
-
+open code:
+  insert("code .")
+  key(enter)
+open here:
+  insert("open .")
+  key(enter)
+open hub:
+  insert("git open")
+  key(enter)
+word get:
+  insert("git ")

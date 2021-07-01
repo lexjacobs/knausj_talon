@@ -3,7 +3,7 @@ import os
 
 ctx = Context()
 ctx.matches = r"""
-app: apple_terminal
+app: iterm2
 """
 directories_to_remap = {}
 directories_to_exclude = {}
