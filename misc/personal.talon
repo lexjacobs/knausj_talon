@@ -29,3 +29,8 @@ trestle:
   insert('github')
 ^snippet thanks:
   insert('Thanks,\nAlex')
+^replace last <user.text>:
+  key(alt-backspace)
+  insert(user.text)
+^launcher$:
+  key(cmd-space)
